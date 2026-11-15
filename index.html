@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Christmas Football Family Party 🎄🏈</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#103b37;color:#fff8df;font-family:system-ui,-apple-system,sans-serif}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:url("christmas-background.png") center/contain no-repeat;opacity:.95}
+header{text-align:center;padding:27px 10px;background:#092e265c}
+h1{margin:4px 0;color:#ffe3a2;font-family:Georgia,serif;font-size:clamp(30px,5.5vw,48px);letter-spacing:.02em;text-shadow:0 3px 14px #001e19}
+.party-line{font-family:Georgia,serif;font-size:clamp(15px,2.8vw,22px);color:#fff0c9;font-style:italic}
+.party-stars{font-size:24px;letter-spacing:8px}
+main{max-width:760px;margin:auto;padding:12px}.panel{background:#092f2866;border:1px solid #f6d999;border-radius:17px;padding:17px;margin:14px 0}
+.timer{font-size:clamp(27px,6vw,43px);font-weight:900;color:#ffe5a7;text-align:center;text-shadow:0 3px 10px #06261d}
+.party-title{font-family:Georgia,serif;font-size:clamp(24px,4vw,34px);color:#ffdfa0;text-shadow:0 2px 9px #05251e;margin:0 0 12px}
+.countdown-party{text-align:center;background:#092f2866}
+.countdown-party .party-sub{font-style:italic;font-family:Georgia,serif;color:#fff3d0}
+.prize-party{background:#092f2866}
+.prize-name{font-family:Georgia,serif;color:#ffe2a2;font-size:20px;font-weight:bold}
+.pick-button{background:linear-gradient(120deg,#fce6a6,#e7b95e);color:#193d32;border:2px solid #fff0c8;border-radius:30px;padding:11px 17px;font-weight:900;cursor:pointer;box-shadow:0 3px 0 #846024}
+.pick-button:focus-visible{outline:3px solid white}
+.winner-select{background:#fff9e9;color:#173c33;width:100%;margin-top:9px}
+.winner-wrap{text-align:right;min-width:190px}
+.winner-chosen{display:block;font-weight:bold;margin-top:7px;color:#fff3d0}
+.status-note{font-size:12px;color:#f6dfae}
+.tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.tab{background:#23513fa8;color:white;border:1px solid #e5c98c;border-radius:12px;padding:12px 5px;font-weight:700;cursor:pointer}
+.tab.active{background:#f3dca7;color:#12382d}.tab img{width:29px;height:29px;object-fit:contain;vertical-align:middle}.tab small{display:block;font-weight:400;margin-top:5px}
+.player{display:flex;align-items:center;gap:12px;padding:11px 2px;border-bottom:1px solid #ffffff33}.player img{width:35px;height:35px}
+.player a{color:inherit;text-decoration:none;display:flex;align-items:center;gap:12px;flex:1;min-width:0}
+.player a:focus-visible{outline:2px solid #ffe0a0;border-radius:6px}.player a strong{text-decoration:underline;text-decoration-color:#f6dc9a;text-underline-offset:3px}.player a:hover strong{color:#ffe0a0}
+.player .info{flex:1}.player small{display:block;color:#e5ddc8}.pts{font-size:20px;font-weight:800}
+.prize{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #ffffff33;padding:12px 0}.prize input{max-width:45%}
+input,select{padding:10px;border:1px solid #ddd;border-radius:8px;font:inherit}#search{width:100%;margin:12px 0}
+.muted,#status{font-size:13px;color:#f2e4be}button.refresh{background:#f3dca7;color:#163d2f;border:0;border-radius:8px;padding:10px;margin:8px 0;font-weight:700}
+/* Festive typography: readable, lightweight, no paid font or remote dependency */
+header h1{font-family:"URW Chancery L","Apple Chancery","Brush Script MT","Segoe Script",cursive;font-size:clamp(43px,8vw,78px);font-weight:500;line-height:1.12;color:#ffcfdf;text-shadow:0 3px 0 #702c4b,0 6px 18px #061d1b;letter-spacing:.01em}
+header .party-line{font-family:"Apple Chancery","Segoe Script",Georgia,serif;font-size:clamp(22px,3.7vw,34px);color:#ffe9a9}
+.countdown-party .party-title{font-family:"Apple Chancery","Segoe Script",Georgia,serif;font-size:clamp(27px,5vw,43px);font-weight:500;color:#ffd9e4;line-height:1.15}
+.timer{font-family:"Trebuchet MS","Avenir Next",sans-serif;font-size:clamp(30px,6.6vw,55px);font-weight:600;letter-spacing:.025em;color:#ffe4aa;text-shadow:0 3px 15px #05231c}
+.countdown-party .party-sub{font-size:clamp(15px,2.3vw,20px);color:#ffdeea}
+.prize-instructions{font-family:"Trebuchet MS",system-ui,sans-serif;font-style:normal;font-size:clamp(16px,2.4vw,22px);line-height:1.5;color:#fff1d4}
+.christmas-reminder{margin:15px 0;padding:16px;border:2px dashed #ffe3a3;border-radius:16px;background:#6d274b66;color:#fff2d8;line-height:1.55}
+.christmas-reminder strong{display:block;font-family:"Apple Chancery","Segoe Script",Georgia,serif;font-size:clamp(23px,3.5vw,31px);color:#ffe5a8;margin-bottom:6px}
+.christmas-reminder span{display:block;font-size:15px}
+footer{text-align:center;padding:20px}@media(min-width:600px){.tabs{grid-template-columns:repeat(4,1fr)}}
+</style></head><body><header><div class="party-stars">🎄 ✨ 🏈 ✨ 🎁</div><h1>The Christmas Football Party!</h1><p class="party-line">Touchdowns, treats & family bragging rights!</p><p>🎅 Three games • Three prizes • One unforgettable Christmas 🎅</p></header>
+<main><section class="panel countdown-party"><h2 class="party-title">🎄 The Christmas Kickoff Countdown! 🎄</h2><div id="timer" class="timer"></div><p class="party-sub">✨ Friday, December 25, 2026 • Noon Central ✨</p></section>
+<section class="panel"><h2>🏈 Player Tracker</h2><div id="tabs" class="tabs"></div><input id="search" placeholder="Search player or team" type="search">
+<button class="refresh" id="refresh">↻ Refresh ESPN Scores</button><div id="status" aria-live="polite">Checking ESPN…</div><div id="players"></div></section>
+<section class="panel prize-party"><h2 class="party-title">🎁🏆 Christmas Prize Winners! 🏆🎁</h2><p class="party-line">🏈🎄 The Final Whistle Has Blown!<br><span class="prize-instructions">Add up your fantasy points, crown your Christmas champion, and let the holiday bragging rights begin! 🏆🎁</span></p><div id="prizes"></div><p class="muted">🎅 Every family member gets to crown their own winner — make your pick and celebrate!</p></section>
+<section class="panel"><details><summary>⚙️ NFL test settings</summary>
+<p class="muted">Select any NFL date. Single day checks that day only; full week checks Thursday through Monday. Christmas Day mode checks Friday, December 25 only. OUT uses confirmed historical cases and available roster status; missing stats alone never means OUT.</p>
+<input type="date" id="date" value="2026-11-08">
+<select id="scope" aria-label="Scoring date range"><option value="day">Selected day only</option><option value="week">Full NFL week (Thu–Mon)</option><option value="christmas">Christmas Day 2026</option></select>
+<div class="christmas-reminder" role="note"><strong>🎅🏈 Christmas Day Game-Time Check!</strong><span>Before the presents and touchdowns fly, make sure the selector above says <b>Christmas Day 2026</b>! Historical dates are just for our practice runs. 🎄✨</span></div>
+<p class="muted">Defensive ≈ scores are partial estimates, not official fantasy totals. Kicker scoring is provisional. BYE means no team game during a full-week test; NO GAME means no team game on the selected day. OUT is displayed only when confirmed. — means no matched statistics, not zero. Expand a numeric score for its components. Verify scores before awarding prizes.</p>
+</details></section></main><footer>Merry Christmas! 🎄 Enjoy time together.</footer>
+<script>
+const P=[{"name":"Jordan Love","team":"GB","position":"QB","espnId":"4036378","scoringMode":"individual"},{"name":"Micah Parsons","team":"GB","position":"DEF","espnId":"4361423","scoringMode":"individual_defense"},{"name":"Christian Watson","team":"GB","position":"WR","espnId":"4248528","scoringMode":"individual"},{"name":"Josh Jacobs","team":"GB","position":"RB","espnId":"4047365","scoringMode":"individual"},{"name":"Caleb Williams","team":"CHI","position":"QB","espnId":"4431611","scoringMode":"individual"},{"name":"Kyle Monangai","team":"CHI","position":"RB","espnId":"4608686","scoringMode":"individual"},{"name":"Rome Odunze","team":"CHI","position":"WR","espnId":"4431299","scoringMode":"individual"},{"name":"Colston Loveland","team":"CHI","position":"TE","espnId":"4723086","scoringMode":"individual"},{"name":"D’Andre Swift","team":"CHI","position":"RB","espnId":"4259545","scoringMode":"individual"},{"name":"Josh Allen","team":"BUF","position":"QB","espnId":"3918298","scoringMode":"individual"},{"name":"James Cook","team":"BUF","position":"RB","espnId":"4379399","scoringMode":"individual"},{"name":"Khalil Shakir","team":"BUF","position":"WR","espnId":"4373678","scoringMode":"individual"},{"name":"DJ Moore","team":"BUF","position":"WR","espnId":"3915416","scoringMode":"individual"},{"name":"Tyler Bass","team":"BUF","position":"K","espnId":"3917232","scoringMode":"individual"},{"name":"Joey Bosa","team":"BUF","position":"DEF","espnId":"3051389","scoringMode":"individual_defense"},{"name":"Dion Dawkins","team":"BUF","position":"OL","espnId":"3051324","scoringMode":"wildcard_qb"},{"name":"Bo Nix","team":"DEN","position":"QB","espnId":"4426338","scoringMode":"individual"},{"name":"Courtland Sutton","team":"DEN","position":"WR","espnId":"3128429","scoringMode":"individual"},{"name":"Pat Bryant","team":"DEN","position":"WR","espnId":"4600981","scoringMode":"individual"},{"name":"RJ Harvey","team":"DEN","position":"RB","espnId":"4568490","scoringMode":"individual"},{"name":"Troy Franklin","team":"DEN","position":"WR","espnId":"4431280","scoringMode":"individual"},{"name":"Marvin Mims Jr.","team":"DEN","position":"WR","espnId":"4686472","scoringMode":"individual"},{"name":"Patrick Surtain II","team":"DEN","position":"DEF","espnId":"4372012","scoringMode":"individual_defense"},{"name":"Davante Adams","team":"LAR","position":"WR","espnId":"16800","scoringMode":"individual"},{"name":"Kyren Williams","team":"LAR","position":"RB","espnId":null,"scoringMode":"individual"},{"name":"Matthew Stafford","team":"LAR","position":"QB","espnId":"12483","scoringMode":"individual"},{"name":"Puka Nacua","team":"LAR","position":"WR","espnId":"4426515","scoringMode":"individual"},{"name":"Sam Darnold","team":"SEA","position":"QB","espnId":"3912547","scoringMode":"individual"},{"name":"Leonard Williams","team":"SEA","position":"DEF","espnId":"2971622","scoringMode":"individual_defense"},{"name":"Zach Charbonnet","team":"SEA","position":"RB","espnId":"4426385","scoringMode":"individual"},{"name":"Cooper Kupp","team":"SEA","position":"WR","espnId":"2977187","scoringMode":"individual"},{"name":"Jaxon Smith-Njigba","team":"SEA","position":"WR","espnId":"4430878","scoringMode":"individual"},{"name":"Devon Witherspoon","team":"SEA","position":"DEF","espnId":null,"scoringMode":"individual_defense"}];
+const G=[['GB','CHI'],['BUF','DEN'],['LAR','SEA']];
+const N={GB:'Packers',CHI:'Bears',BUF:'Bills',DEN:'Broncos',LAR:'Rams',SEA:'Seahawks'};
+const L={GB:'gb',CHI:'chi',BUF:'buf',DEN:'den',LAR:'lar',SEA:'sea'};
+const $=id=>document.getElementById(id),logo=t=>'https://a.espncdn.com/i/teamlogos/nfl/500/'+L[t]+'.png';
+let tab=-1,scores={},states={},scoreDetails={},defensePartial={},busy=false,requestId=0,winners={};
+try{winners=JSON.parse(localStorage.getItem('christmas-winners')||'{}')}catch{}
+function esc(x){return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]))}
+const key=p=>p.team+'|'+p.name;
+function render(){
+ let tabs=[{i:-1,t:'All Games',sub:P.length+' players'},...G.map((g,i)=>({i,t:'Game '+(i+1),sub:N[g[0]]+' / '+N[g[1]]}))];
+ $('tabs').innerHTML=tabs.map(x=>'<button class="tab '+(tab===x.i?'active':'')+'" data-i="'+x.i+'">'+(x.i<0?'🏈':G[x.i].map(t=>'<img alt="'+t+'" src="'+logo(t)+'">').join(''))+'<div>'+x.t+'</div><small>'+x.sub+'</small></button>').join('');
+ document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{tab=Number(b.dataset.i);render()});
+ let q=$('search').value.toLowerCase();
+ $('players').innerHTML=P.filter(p=>(tab<0||G[tab].includes(p.team))&&(p.name+' '+N[p.team]).toLowerCase().includes(q)).map(p=>{
+ let k=key(p),s=scores[k],label=Number.isFinite(s)?(defensePartial[k]?'≈':'')+s.toFixed(1):(states[k]||'—');
+ let href=p.espnId?'https://www.espn.com/nfl/player/_/id/'+encodeURIComponent(p.espnId):'https://www.espn.com/search/_/q/'+encodeURIComponent(p.name);
+ let detail=scoreDetails[k]||'';
+ return '<div class="player"><a target="_blank" rel="noopener noreferrer" href="'+href+'"><img src="'+logo(p.team)+'" alt="'+p.team+'"><div class="info"><strong>'+esc(p.name)+' ↗</strong><small>'+N[p.team]+' · '+p.position+(p.scoringMode==='individual_defense'?' · IDP':p.scoringMode==='wildcard_qb'?' · ⭐ WILD CARD':'')+'</small>'+(p.scoringMode==='wildcard_qb'?'<small>⭐ Bonus card — mirrors Josh Allen’s fantasy points</small>':'')+'</div></a><div class="pts" title="'+esc(detail)+'">'+esc(label)+'</div></div>'+(detail?'<details class="muted"><summary>Score components / source</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">'+esc(detail)+'</pre></details>':'');
+ }).join('')||'<p>No players match.</p>';
+}
+const FAMILY=['Josh H.','Kim','Logan','Adelyn','Hunter','Josh S.','Jason','Ashton','Grancy','Papa'];
+function prize(){
+ $('prizes').innerHTML=G.map((g,i)=>'<div class="prize"><div><div class="prize-name">🎁 Prize '+(i+1)+' — Holiday Champion</div><small>'+N[g[0]]+' vs '+N[g[1]]+'</small></div><div class="winner-wrap"><button class="pick-button" data-open="'+i+'" type="button">🏆 Crown the Winner! 🎄</button><div id="winner-picker-'+i+'" hidden><select class="winner-select" data-w="'+i+'" aria-label="Select Prize '+(i+1)+' winner"><option value="">Choose a family winner…</option>'+FAMILY.map(n=>'<option value="'+esc(n)+'" '+(winners[i]===n?'selected':'')+'>'+esc(n)+'</option>').join('')+'</select></div><span class="winner-chosen" id="chosen-'+i+'">'+(winners[i]?'🏆 '+esc(winners[i]):'🎅 Awaiting winner')+'</span></div></div>').join('');
+ document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{let x=$('winner-picker-'+b.dataset.open);x.hidden=!x.hidden;if(!x.hidden)x.querySelector('select').focus()});
+ document.querySelectorAll('[data-w]').forEach(x=>x.onchange=()=>{winners[x.dataset.w]=x.value;localStorage.setItem('christmas-winners',JSON.stringify(winners));$('chosen-'+x.dataset.w).textContent=x.value?'🏆 '+x.value:'🎅 Awaiting winner';$('winner-picker-'+x.dataset.w).hidden=true});
+}
+function countdown(){let n=Math.max(0,Math.floor((new Date('2026-12-25T12:00:00-06:00')-Date.now())/1000)),d=Math.floor(n/86400);n%=86400;let h=Math.floor(n/3600);n%=3600;$('timer').textContent=d+'d '+String(h).padStart(2,'0')+'h '+String(Math.floor(n/60)).padStart(2,'0')+'m '+String(n%60).padStart(2,'0')+'s'}
+function norm(t){return t==='LA'?'LAR':t==='GNB'?'GB':t==='WSH'?'WAS':t}
+function numeric(v){if(v===null||v===undefined)return null;let s=String(v).replace(/,/g,'').trim();return /^-?\d+(\.\d+)?$/.test(s)?Number(s):null}
+function findStat(group,item,names){let vals=item.stats||[];for(const labels of [group.keys||[],group.labels||[]]){let i=labels.findIndex(x=>names.includes(String(x).toLowerCase().replace(/[^a-z0-9]/g,'')));if(i>=0)return numeric(vals[i])}return null}
+function parse(data){
+ let out=new Map();
+ for(const t of data.boxscore?.players||[])for(const g of t.statistics||[])for(const x of g.athletes||[]){
+ let a=x.athlete||{},id=String(a.id),team=norm(t.team?.abbreviation),k=team+'|'+id;
+ if(!out.has(k))out.set(k,{id,name:a.displayName,team,p:{},r:{},c:{}});
+ let r=out.get(k),cat=String(g.name||g.displayName||'').toLowerCase();
+ if(cat.includes('passing'))r.p={y:findStat(g,x,['yds','yards']),td:findStat(g,x,['td','touchdowns']),int:findStat(g,x,['int','interceptions'])};
+ if(cat.includes('rushing'))r.r={y:findStat(g,x,['yds','yards']),td:findStat(g,x,['td','touchdowns'])};
+ if(cat.includes('receiving'))r.c={n:findStat(g,x,['rec','receptions']),y:findStat(g,x,['yds','yards']),td:findStat(g,x,['td','touchdowns'])};
+ }
+ return [...out.values()];
+}
+function fantasy(a,pos){let p=a.p,r=a.r,c=a.c;if(![p.y,p.td,p.int,r.y,r.td,c.n,c.y,c.td].every(x=>x==null||(Number.isFinite(x)&&Math.abs(x)<2000)))return null;
+ let py=p.y||0,ry=r.y||0,cy=c.y||0;
+ return py/20+(p.td||0)*6+ry/10+(r.td||0)*6+cy/10+(c.td||0)*6+(c.n||0)*(pos==='TE'?1.5:1)+(py>=300?3:0)+(ry>=100?3:0)+(cy>=100?3:0)-(p.int||0)*2}
+function match(a,p){return a.team===p.team&&((p.espnId&&String(a.id)===String(p.espnId))||String(a.name||'').toLowerCase()===p.name.toLowerCase())}
+function kicker(data,p){
+ let groups=(data.boxscore?.players||[]).find(t=>norm(t.team?.abbreviation)===p.team)?.statistics||[];
+ for(const g of groups){if(!/kick/i.test(String(g.name||g.displayName||'')))continue;
+ let item=(g.athletes||[]).find(x=>(p.espnId&&String(x.athlete?.id)===String(p.espnId))||String(x.athlete?.displayName||'').toLowerCase()===p.name.toLowerCase());if(!item)continue;
+ let fg=findStat(g,item,['fg','fgma','fgm','fieldgoals','fieldgoalsmade']),xp=findStat(g,item,['xp','xpa','xpm','xpma','extrapoints','extrapointsmade']);
+ // ESPN often uses made-attempted pairs. Read the first number, never the attempt count.
+ const raw=(names)=>{for(const labels of [g.keys||[],g.labels||[]]){let i=labels.findIndex(x=>names.includes(String(x).toLowerCase().replace(/[^a-z0-9]/g,'')));if(i>=0)return String(item.stats?.[i]??'')}return ''};
+ const made=s=>{let m=s.match(/^(\d+)(?:\s*-\s*\d+)?$/);return m?Number(m[1]):null};
+ if(fg===null)fg=made(raw(['fg','fgma','fgm','fieldgoals','fieldgoalsmade']));
+ if(xp===null)xp=made(raw(['xp','xpa','xpm','xpma','extrapoints','extrapointsmade']));
+ if(fg!==null&&xp!==null)return {points:fg*3+xp,partial:true,detail:'Provisional kicker scoring (3 per made FG, 1 per made XP): '+JSON.stringify({fg,xp,labels:g.labels,keys:g.keys,stats:item.stats})};
+ }return null;
+}
+function idpScore(data,p){
+ let team=(data.boxscore?.players||[]).find(t=>norm(t.team?.abbreviation)===p.team);if(!team)return null;
+ let rows=[];for(const g of team.statistics||[]){let x=(g.athletes||[]).find(x=>(p.espnId&&String(x.athlete?.id)===String(p.espnId))||String(x.athlete?.displayName||'').toLowerCase()===p.name.toLowerCase());if(x)rows.push({g,x,category:String(g.name||g.displayName||'').toLowerCase()})}
+ if(!rows.length)return null;
+ const get=(categories,names)=>{for(const row of rows){if(!categories.some(c=>row.category.includes(c)))continue;let v=findStat(row.g,row.x,names);if(v!==null)return v}return null};
+ let def=['defens','tackle'],solo=get(def,['solo','sol','solotackles']),assisted=get(def,['ast','assist','assists','assisted','assistedtackles']);
+ let sacks=get(def,['sack','sacks','sk']),pd=get(def,['pd','pdef','passesdefended','passdeflections','passesdefensed']);
+ let ints=get(['interception','defens'],['int','ints','interceptions']),ff=get(['fumble','defens'],['ff','forcedfumbles','fumblesforced']);
+ let fr=get(['fumble','defens'],['fr','fumrec','fumblesrecovered','fumblercoveries','fumblesrecoveries']),td=get(['interception','fumble','defens'],['td','touchdowns','deftd','defensivetouchdowns']);
+ if([solo,assisted,sacks,pd,ints,ff,fr,td].every(v=>v===null))return null;
+ let points=(solo||0)+.5*(assisted||0)+4*(sacks||0)+5*(ints||0)+3*(ff||0)+3*(fr||0)+(pd||0)+6*(td||0);
+ return {points:Math.round(points*10)/10,partial:[solo,assisted,sacks,pd,ints,ff,fr,td].some(v=>v===null),detail:'Provisional IDP scoring: '+JSON.stringify({solo,assisted,sacks,pd,ints,ff,fr,td})};
+}
+function dateStrings(){
+ const scope=$('scope').value,selected=scope==='christmas'?'2026-12-25':$('date').value;
+ if(scope!=='week')return [selected.replaceAll('-','')];
+ let d=new Date(selected+'T12:00:00Z');if(!Number.isFinite(d.getTime()))throw Error('Invalid date');
+ d.setUTCDate(d.getUTCDate()-(d.getUTCDay()+3)%7);
+ return Array.from({length:5},(_,i)=>{let x=new Date(d);x.setUTCDate(x.getUTCDate()+i);return x.toISOString().slice(0,10).replaceAll('-','')});
+}
+const HISTORICAL_OUT={
+ '2026-10-22':['Kyle Monangai'],
+ '2026-10-25':['Patrick Surtain II','Micah Parsons','Pat Bryant','Zach Charbonnet'],
+ '2026-11-08':['Leonard Williams']
+};
+function knownOut(p,dates){return dates.some(d=>(HISTORICAL_OUT[d]||[]).includes(p.name))}
+function inactiveFromSummary(data,p){
+ const rows=(data.rosters||[]).flatMap(r=>r.roster||r.athletes||[]);
+ return rows.some(x=>{
+  let a=x.athlete||x,team=norm(x.team?.abbreviation||a.team?.abbreviation||'');
+  let same=(p.espnId&&String(a.id)===String(p.espnId))||String(a.displayName||'').toLowerCase()===p.name.toLowerCase();
+  let status=String(x.status?.name||x.status?.type?.name||x.status?.type?.description||x.status?.description||'').toLowerCase();
+  return same&&(!team||team===p.team)&&(/inactive|out|injured reserve|physically unable|suspended/.test(status)||x.didNotPlay===true);
+ });
+}
+async function refresh(){
+ if(busy)return;busy=true;let found=0,matched=0,next={},details={},partial={},statesNext={},teamsSeen=new Set(),confirmedOut=new Set(),failed=0;
+ $('status').textContent='Checking ESPN…';
+ try{
+ let dates=dateStrings();
+ let responses=await Promise.allSettled(dates.map(async date=>{let r=await fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates='+date,{cache:'no-store'});if(!r.ok)throw Error('Schedule HTTP '+r.status);return (await r.json()).events||[]}));
+ failed=responses.filter(x=>x.status==='rejected').length;
+ if(failed===dates.length)throw Error('All scoreboard requests failed');
+ let events=[...new Map(responses.filter(x=>x.status==='fulfilled').flatMap(x=>x.value).map(e=>[e.id,e])).values()];
+ for(const e of events){
+ let teams=(e.competitions?.[0]?.competitors||[]).map(c=>norm(c.team?.abbreviation));
+ if(!teams.some(t=>Object.hasOwn(N,t)))continue;
+ found++;teams.filter(t=>Object.hasOwn(N,t)).forEach(t=>teamsSeen.add(t));
+ let r;
+ try{r=await fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event='+encodeURIComponent(e.id),{cache:'no-store'});if(!r.ok)throw Error('Boxscore HTTP '+r.status)}catch{failed++;continue}
+ let summary=await r.json(),athletes=parse(summary);for(const p of P.filter(p=>teams.includes(p.team)))if(inactiveFromSummary(summary,p))confirmedOut.add(key(p));
+ for(const p of P.filter(p=>teams.includes(p.team))){
+ let k=key(p),v=null,detail='',approx=false;
+ if(p.scoringMode==='individual_defense'){let d=idpScore(summary,p);if(d){v=d.points;detail=d.detail;approx=d.partial}}
+ else if(p.scoringMode==='wildcard_qb'){let a=athletes.find(a=>a.team==='BUF'&&(a.id==='3918298'||a.name?.toLowerCase()==='josh allen'));if(a&&(Object.keys(a.p).length||Object.keys(a.r).length||Object.keys(a.c).length)){v=fantasy(a,'QB');detail='Wild card: mirrors Josh Allen, '+JSON.stringify(a)}}
+ else if(p.position==='K'){let d=kicker(summary,p);if(d){v=d.points;detail=d.detail;approx=d.partial}}
+ else {let a=athletes.find(a=>match(a,p));if(a&&(Object.keys(a.p).length||Object.keys(a.r).length||Object.keys(a.c).length)){v=fantasy(a,p.position);detail='Offensive box score: '+JSON.stringify({passing:a.p,rushing:a.r,receiving:a.c})}}
+ if(Number.isFinite(v)){next[k]=v;details[k]=detail;partial[k]=approx;matched++}
+ }
+ }
+ const date=$('scope').value==='christmas'?'2026-12-25':$('date').value;
+ for(const p of P){let k=key(p);if(Number.isFinite(next[k]))continue;
+ if(confirmedOut.has(k)||knownOut(p,dates.map(x=>x.slice(0,4)+'-'+x.slice(4,6)+'-'+x.slice(6,8))))statesNext[k]='OUT';
+ else if(!teamsSeen.has(p.team))statesNext[k]=$('scope').value==='week'?'BYE':'NO GAME';
+ else statesNext[k]='—';
+ }
+ // Do not label a player BYE when the schedule lookup was incomplete.
+ if(failed>0)for(const p of P){let k=key(p);if(statesNext[k]==='BYE'||statesNext[k]==='NO GAME')statesNext[k]='—'}
+ scores=next;scoreDetails=details;defensePartial=partial;states=statesNext;
+ $('status').textContent='ESPN '+$('scope').value+' check: '+found+' relevant games, '+matched+' scores; '+failed+' request(s) failed. Checked '+new Date().toLocaleTimeString()+'. — means unverified/missing data. IDP and kicker scores are provisional. Confirm all points before prizes.';
+ }catch(e){$('status').textContent='ESPN feed unavailable: '+e.message+'; previous scores retained.'}
+ finally{busy=false;render()}
+}
+$('search').oninput=render;$('refresh').onclick=refresh;$('date').onchange=refresh;$('scope').onchange=refresh;
+render();prize();countdown();setInterval(countdown,1000);setInterval(refresh,90000);setTimeout(refresh,1200);
+</script></body></html>
